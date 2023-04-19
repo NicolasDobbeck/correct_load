@@ -4,9 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -18,9 +16,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {
@@ -53,9 +53,32 @@ fun LoadScreen() {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.FillBounds
         )
+        Row() {
+            Text(
+                text =  stringResource(id = R.string.text_logo),
+                fontSize = 80.sp,
+                style = MaterialTheme.typography.h2.copy(
+                    fontFamily = FontFamily(Font(R.font.mansalva_regular)),
+                    color = Color(android.graphics.Color.parseColor("#E0B441"))
+                )
+            )
+            Text(
+                text =  stringResource(id = R.string.text_logo2),
+                fontSize = 80.sp,
+                style = MaterialTheme.typography.h2.copy(
+                    fontFamily = FontFamily(Font(R.font.mansalva_regular)),
+                    color = Color(android.graphics.Color.parseColor("#FFFFFF"))
+                )
+            )
+        }
         Text(
-            text =  stringResource(id = R.string.text_logo),
-            color = Color.Yellow
+            modifier = Modifier.offset(y = 50.dp),
+            text = stringResource(id = R.string.subtitle),
+            fontSize = 16.sp,
+            style =  MaterialTheme.typography.h4.copy(
+                fontFamily = FontFamily(Font(R.font.poppins_regular)),
+                color = Color(android.graphics.Color.parseColor("#FFFFFF"))
+            )
         )
         CircularProgressIndicator(
             modifier = Modifier.offset(y = 100.dp),

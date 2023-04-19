@@ -8,12 +8,30 @@ val Mansalva = FontFamily(
     Font(R.font.mansalva_regular)
 )
 
-val Poppins = FontFamily(
-    Font(R.font.poppins_thin),
-    Font(R.font.poppins_light),
-    Font(R.font.poppins_regular),
-    Font(R.font.poppins_medium),
-    Font(R.font.poppins_semibold),
-    Font(R.font.poppins_bold),
+val PoppinsRegular = FontFamily(
+    Font(R.font.poppins_regular)
+)
+
+val PoppinsThin = FontFamily(
+    Font(R.font.poppins_thin)
+)
+
+val PoppinsLight = FontFamily(
+    Font(R.font.poppins_light)
+)
+
+val PoppinsMedium = FontFamily(
+    Font(R.font.poppins_medium)
+)
+
+val PoppinsSemiBold = FontFamily(
+    Font(R.font.poppins_semibold)
+)
+
+val PoppinsBold = FontFamily(
+    Font(R.font.poppins_bold)
+)
+
+val PoppinsExtraBold = FontFamily(
     Font(R.font.poppins_extrabold)
 )
